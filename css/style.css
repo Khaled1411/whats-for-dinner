@@ -1,0 +1,359 @@
+/* ============ Design tokens ============ */
+:root {
+  --bg-cream: #fdf3e4;
+  --card-white: #ffffff;
+  --text-dark: #1f2937;
+  --text-grey: #6b7280;
+  --orange: #ff6b35;
+  --orange-dark: #ea580c;
+  --border-light: #f0ece2;
+  --shadow-card: 0 8px 24px rgba(31, 41, 55, 0.06);
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: var(--bg-cream);
+  color: var(--text-dark);
+  min-height: 100vh;
+}
+
+/* ============ Header ============ */
+.app-header {
+  background: #ffffff;
+  border-bottom: 1px solid var(--border-light);
+  padding: 14px 28px;
+}
+
+.logo-circle {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff8a5c, var(--orange));
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.app-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.app-subtitle {
+  font-size: 0.78rem;
+  color: var(--text-grey);
+}
+
+.header-icon {
+  font-size: 1.2rem;
+  color: #4b5563;
+  cursor: pointer;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* ============ Main / Recipe card ============ */
+.app-main {
+  padding: 40px 20px;
+}
+
+.recipe-card {
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+.recipe-card .row {
+  --bs-gutter-x: 28px;
+}
+
+/* --- Image column --- */
+.recipe-image-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.recipe-image-wrapper {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  min-height: 340px;
+}
+
+.recipe-image {
+  width: 100%;
+  height: 100%;
+  min-height: 340px;
+  object-fit: cover;
+  display: block;
+}
+
+.rating-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: #ffffff;
+  padding: 6px 14px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+.rating-badge i {
+  color: #fbbf24;
+}
+
+.rating-badge .reviews {
+  color: var(--text-grey);
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+
+.stats-bar {
+  background: var(--card-white);
+  border-radius: 16px;
+  box-shadow: var(--shadow-card);
+  padding: 18px 10px;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.stat-icon {
+  font-size: 1.1rem;
+  margin-bottom: 2px;
+}
+
+.stat-icon.prep { color: var(--orange); }
+.stat-icon.cook { color: #ef4444; }
+.stat-icon.servings { color: #3b82f6; }
+
+.stat-label {
+  font-size: 0.75rem;
+  color: var(--text-grey);
+}
+
+.stat-value {
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+/* --- Details column --- */
+.recipe-details-col {
+  background: var(--card-white);
+  border-radius: 20px;
+  box-shadow: var(--shadow-card);
+  padding: 32px;
+}
+
+.badges-row {
+  display: flex;
+  gap: 8px;
+}
+
+.badge-pill {
+  padding: 5px 14px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.badge-difficulty {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.badge-cuisine {
+  background: #e0e7ff;
+  color: #4f46e5;
+}
+
+.action-icons {
+  display: flex;
+  gap: 8px;
+}
+
+.icon-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: none;
+  background: #fff3ea;
+  color: var(--orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s ease;
+}
+
+.icon-btn:hover {
+  background: #ffe3d1;
+}
+
+.recipe-name {
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin-top: 16px;
+  margin-bottom: 6px;
+}
+
+.recipe-description {
+  color: var(--text-grey);
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+/* --- Tabs --- */
+.recipe-tabs {
+  display: flex;
+  gap: 22px;
+  border-bottom: 1px solid var(--border-light);
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  padding: 0 0 12px 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-grey);
+  border-bottom: 2px solid transparent;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.tab-btn.active {
+  color: var(--orange-dark);
+  border-bottom-color: var(--orange);
+  font-weight: 600;
+}
+
+/* --- Tab content --- */
+.tab-content-box {
+  background: #fdf6ec;
+  border-radius: 14px;
+  padding: 20px;
+  min-height: 220px;
+  margin-bottom: 24px;
+}
+
+.ingredient-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 9px 0;
+  font-size: 0.92rem;
+}
+
+.ingredient-num {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  border-radius: 50%;
+  background: var(--orange);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tip-icon {
+  color: var(--orange);
+  min-width: 20px;
+}
+
+.nutrition-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  text-align: center;
+}
+
+.nutrition-item {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.nutrition-item strong {
+  font-size: 1.3rem;
+  color: var(--orange-dark);
+}
+
+.nutrition-item span {
+  font-size: 0.75rem;
+  color: var(--text-grey);
+}
+
+/* --- Try another button --- */
+.btn-try-another {
+  width: 100%;
+  border: none;
+  padding: 13px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, var(--orange), #f43f3f);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: opacity 0.15s ease;
+}
+
+.btn-try-another:hover {
+  opacity: 0.9;
+}
+
+/* ============ Responsive ============ */
+@media (max-width: 991px) {
+  .recipe-image-col {
+    margin-bottom: 20px;
+  }
+  .recipe-image-wrapper,
+  .recipe-image {
+    min-height: 260px;
+  }
+}
+
+@media (max-width: 576px) {
+  .nutrition-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .recipe-details-col {
+    padding: 22px;
+  }
+}
