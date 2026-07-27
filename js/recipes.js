@@ -1,4 +1,3 @@
-
 const recipes = [
   {
     id: 1,
@@ -13,7 +12,6 @@ const recipes = [
     prepTime: 10,
     cookTime: 5,
     servings: 2,
-
     ingredients: [
       "1 ciabatta bread",
       "200g fresh mozzarella, sliced",
@@ -24,7 +22,6 @@ const recipes = [
       "Olive oil",
       "Salt and pepper",
     ],
-
     instructions: [
       "Slice the ciabatta bread in half lengthwise.",
       "Spread pesto generously on both halves of the bread.",
@@ -33,21 +30,18 @@ const recipes = [
       "Drizzle with olive oil and balsamic glaze, then season with salt and pepper.",
       "Close the sandwich, press gently, and slice in half to serve.",
     ],
-
     nutrition: {
       calories: 420,
       protein: 18,
       carbs: 45,
       fat: 20,
     },
-
     tips: [
       "Use fresh buffalo mozzarella for the creamiest texture.",
       "Toast the ciabatta lightly first for extra crunch.",
       "Salt the tomato slices and let them sit 5 minutes to remove excess water before assembling.",
     ],
   },
-
   {
     id: 2,
     name: "Chicken Shawarma Wrap",

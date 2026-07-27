@@ -1,4 +1,3 @@
-/* ============ Design tokens ============ */
 :root {
   --bg-cream: #fdf3e4;
   --card-white: #ffffff;
@@ -20,7 +19,6 @@ body {
   min-height: 100vh;
 }
 
-/* ============ Header ============ */
 .app-header {
   background: #ffffff;
   border-bottom: 1px solid var(--border-light);
@@ -62,7 +60,6 @@ body {
   object-fit: cover;
 }
 
-/* ============ Main / Recipe card ============ */
 .app-main {
   padding: 40px 20px;
 }
@@ -76,7 +73,7 @@ body {
   --bs-gutter-x: 28px;
 }
 
-/* --- Image column --- */
+
 .recipe-image-col {
   display: flex;
   flex-direction: column;
@@ -160,7 +157,6 @@ body {
   font-size: 0.95rem;
 }
 
-/* --- Details column --- */
 .recipe-details-col {
   background: var(--card-white);
   border-radius: 20px;
@@ -225,7 +221,7 @@ body {
   margin-bottom: 20px;
 }
 
-/* --- Tabs --- */
+
 .recipe-tabs {
   display: flex;
   gap: 22px;
@@ -255,7 +251,7 @@ body {
   font-weight: 600;
 }
 
-/* --- Tab content --- */
+
 .tab-content-box {
   background: #fdf6ec;
   border-radius: 14px;
@@ -317,7 +313,7 @@ body {
   color: var(--text-grey);
 }
 
-/* --- Try another button --- */
+
 .btn-try-another {
   width: 100%;
   border: none;
@@ -337,8 +333,6 @@ body {
 .btn-try-another:hover {
   opacity: 0.9;
 }
-
-/* ============ Responsive ============ */
 @media (max-width: 991px) {
   .recipe-image-col {
     margin-bottom: 20px;
